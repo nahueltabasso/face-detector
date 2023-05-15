@@ -3,9 +3,11 @@ import face_recognition as fr
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 print(f"OpenCV version = {cv2.__version__}")
 print(f"Face Recognition version = {fr.__version__}")
 print(f"Numpy version = {np.__version__}")
+
 
 def show(images: list[np.ndarray], labels: list[str], show: bool=False):
     """This method show a list of images with it corresponding label
@@ -32,8 +34,15 @@ def show(images: list[np.ndarray], labels: list[str], show: bool=False):
         plt.show()
         
 
-def show_image(image: np.ndarray):
-    print("")
+def show_image(image: np.ndarray, label: str):
+    """Show an image with OpenCV 
+
+    Args:
+        image (np.ndarray): _description_
+        label (str): _description_
+    """
+    cv2.imshow(label, image)
+    cv2.waitKey()
         
 
 def detect_faces(image: np.ndarray, output_dir: str='', save: bool=False):
