@@ -1,19 +1,20 @@
 from fastapi import FastAPI, File, UploadFile, Header
 from typing import Annotated
+from service import detected_faces_from_image, validated_api_key
 from config.logger_config import logger
 from util.util import valid_img_file
-from service import detected_faces_from_image, validated_api_key
 
 app = FastAPI()
 
 @app.post("/faceDetectAPI/detect_face", status_code=200)
 def detect_face_in_image(api_key: Annotated[str, Header()] = None,
                          image: UploadFile = File(...)):
-    """_summary_
+    """API Endpoint to process and detect faces in a specific picture
 
     Args:
-        api_key (Annotated[str, Header, optional): _description_. Defaults to None.
-        image (UploadFile, optional): _description_. Defaults to File(...).
+        api_key (Annotated[str, Header, optional): api_key needed to use
+        this API.
+        image (UploadFile, optional): file to process.
 
     Returns:
         _type_: _description_

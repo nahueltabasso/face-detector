@@ -4,7 +4,7 @@ from io import BytesIO
 import numpy as np
 
 def valid_img_file(file: UploadFile = File(...)):
-    """_summary_
+    """Method signature to valid a file if is or not an image
 
     Args:
         file (UploadFile, optional): _description_. Defaults to File(...).
@@ -21,7 +21,7 @@ def valid_img_file(file: UploadFile = File(...)):
     
 
 def conver_to_nparray(file: UploadFile = File(...)):
-    """_summary_
+    """Method Signature to convert a FastApi File to a numpy array
 
     Args:
         file (UploadFile, optional): _description_. Defaults to File(...).

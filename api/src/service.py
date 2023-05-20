@@ -2,11 +2,11 @@ import sys
 import os
 import uuid
 sys.path.append('../../')
+from fastapi import File, UploadFile
+from dotenv import load_dotenv
 from scripts.face_detector_fr import detect_faces
 from config.logger_config import logger
-from fastapi import File, UploadFile
 from util.util import conver_to_nparray
-from dotenv import load_dotenv
 
 
 STR_TO_BOOL = {"True": True, "False": False}
@@ -14,7 +14,7 @@ load_dotenv()
 
 
 def detected_faces_from_image(file: UploadFile = File(...)) -> dict:
-    """_summary_
+    """Method Signature to detected faces from an image
 
     Args:
         file (UploadFile, optional): _description_. Defaults to File(...).
@@ -35,7 +35,7 @@ def detected_faces_from_image(file: UploadFile = File(...)) -> dict:
 
 
 def validated_api_key(api_key: str) -> bool:
-    """_summary_
+    """Method Signature to valid the api_key
 
     Args:
         api_key (str): _description_
