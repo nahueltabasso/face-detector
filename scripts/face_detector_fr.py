@@ -68,13 +68,19 @@ def detect_faces(image: np.ndarray, output_dir: str='', save: bool=False):
                         color=(0, 255, 0),
                         thickness=2)
         response = {
+            "status": 200,
             "detected_face": True,
             "bbox_faces": locate_faces,
             "number_of_detected_faces": len(locate_faces)
-        }           
+        }        
         if save:
             cv2.imwrite(output_dir, image)
         return response
     # Not detected any faces in the image
-    response = {"detected_face": False}
+    response = {
+        "status": 200,
+        "detected_face": False,
+        "bbox_faces": None,
+        "number_of_detected_faces": 0
+    }
     return response
