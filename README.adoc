@@ -2,10 +2,11 @@
 
 The Face Detector API is an application that use the 'face-recognition' library and the algorithm of HaarCascade from OpenCV library.
 
-[source]
-|===
-|data/Foto_Prueba1c.jpg |data/test_result_4.jpg
-|===
+image::Foto_Prueba1c.jpg[]
+
+[#img-sunset,caption="Figure 1: ",link=data/Foto_Prueba1c.jpg]
+
+// |image::data/Foto_Prueba1c.jpg |image::data/test_result_4.jpg
 
 
 
@@ -33,3 +34,63 @@ pip install -r requirements.txt
 
 3- Execute the notebooks
 
+== API COMMENTS
+
+To consume the APIs REST of this project you need to 
+
+1- Start the server
+[source]
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+2- Make a request HTTP POST similar to this example with curl or Postman or other http client
+
+[source]
+curl -X POST \
+  -H "Content-Type: multipart/form-data" \
+  -H "api_key: your_api_key" \
+  -F "image=@path_to_image.jpg" \
+  http://localhost:8000/faceDetectAPI/detect_face
+
+Make sure to replace "your_api_key" by the real value of this header and replace the "@path_to_image.jpg" by your image
+
+The response of this api are similar to:
+[source, json]
+{
+  "status": 200,
+  "detected_face": true,
+  "bbox_faces": [
+    [
+      163,
+      384,
+      225,
+      322
+    ],
+    [
+      205,
+      475,
+      257,
+      423
+    ]
+  ],
+  "number_of_detected_faces": 2
+}
+
+== CONTRIBUTIONS
+All contributions are welcome. If somebody has a new idea or a form to improve this, please crear a issue to work.
+
+== LICENSE
+This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
+
+== CONTACT
+If you have some question about this you can contac me to my email nahueltabasso@gmail.com
+
+
+// image::sunset.jpg[]
+
+// image::sunset.jpg[Sunset]
+
+// .A mountain sunset
+// [#img-sunset,caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
+// image::macros:sunset.jpg[Sunset,200,100]
+
+// image::https://asciidoctor.org/images/octocat.jpg[GitHub mascot]
