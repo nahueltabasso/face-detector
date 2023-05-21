@@ -2,14 +2,6 @@
 
 The Face Detector API is an application that use the 'face-recognition' library and the algorithm of HaarCascade from OpenCV library.
 
-image::data/Foto_Prueba1c.jpg[]
-
-[#img-sunset,caption="Figure 1: ",link=data/Foto_Prueba1c.jpg]
-
-// |image::data/Foto_Prueba1c.jpg |image::data/test_result_4.jpg
-
-
-
 == GETTING STARTED
 
 1- Clone the repository or download the project files
@@ -83,14 +75,3 @@ This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
 
 == CONTACT
 If you have some question about this you can contac me to my email nahueltabasso@gmail.com
-
-
-// image::sunset.jpg[]
-
-// image::sunset.jpg[Sunset]
-
-// .A mountain sunset
-// [#img-sunset,caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
-// image::macros:sunset.jpg[Sunset,200,100]
-
-// image::https://asciidoctor.org/images/octocat.jpg[GitHub mascot]
