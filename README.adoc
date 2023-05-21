@@ -2,7 +2,7 @@
 
 The Face Detector API is an application that use the 'face-recognition' library and the algorithm of HaarCascade from OpenCV library.
 
-image::Foto_Prueba1c.jpg[]
+image::data/Foto_Prueba1c.jpg[]
 
 [#img-sunset,caption="Figure 1: ",link=data/Foto_Prueba1c.jpg]
 
