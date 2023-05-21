@@ -1,1 +1,35 @@
-= FaceDetectAPI
+= FACE DETECTOR API
+
+The Face Detector API is an application that use the 'face-recognition' library and the algorithm of HaarCascade from OpenCV library.
+
+[source]
+|===
+|./data/Foto_Prueba1c.jpg |./data/test_result_4.jpg
+|===
+
+
+
+== GETTING STARTED
+
+1- Clone the repository or download the project files
+
+[source]
+git clone https://github.com/nahueltabasso/face-detector.git
+
+2- Make sure you have python version 3.10.10 installed
+
+3- Install the dependencies using the pip package manager
+
+[source]
+pip install -r requirements.txt
+
+== USE
+1- Save the images that you need to process in the follow directory
+----
+./data/
+----
+
+2- Modify the paths of the images in the notebooks by the paths of the images you want to process
+
+3- Execute the notebooks
+
