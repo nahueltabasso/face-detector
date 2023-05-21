@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, Header
-from typing import Annotated
+from typing import Annotated, Union
 from service import detected_faces_from_image, validated_api_key
 from config.logger_config import logger
 from util.util import valid_img_file
@@ -7,7 +7,8 @@ from util.util import valid_img_file
 app = FastAPI()
 
 @app.post("/faceDetectAPI/detect_face", status_code=200)
-def detect_face_in_image(api_key: Annotated[str, Header()] = None,
+def detect_face_in_image(api_key: Annotated[Union[str, None],
+                                            Header(convert_underscores=False)] = None,
                          image: UploadFile = File(...)):
     """API Endpoint to process and detect faces in a specific picture
 
@@ -24,7 +25,7 @@ def detect_face_in_image(api_key: Annotated[str, Header()] = None,
     logger.info(f"Request Header api_key ----- {api_key}")
     logger.info(f"Request Image ----- {image.filename}")
     if not validated_api_key(api_key=api_key):
-        logger.error("api_key Header can not be None")
+        logger.error("api_key Header not valid")
         return {"status": 200, "error_code": "HEADER_NOT_VALID"}
     
     if not valid_img_file(image):
