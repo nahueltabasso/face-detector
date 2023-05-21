@@ -4,7 +4,7 @@ The Face Detector API is an application that use the 'face-recognition' library 
 
 [source]
 |===
-|./data/Foto_Prueba1c.jpg |./data/test_result_4.jpg
+|data/Foto_Prueba1c.jpg |data/test_result_4.jpg
 |===
 
 
