@@ -87,6 +87,30 @@ All contributions are welcome. If somebody has a new idea or a form to improve t
 $ git clone https://github.com/nahueltabasso/face-detector.git
 ----
 
+2. Create a new branch in your local repository to add your changes
+[source,shell]
+----
+$ git checkout -b name_branch
+----
+
+3. Make your changes in your local branch y commit your code
+[source,shell]
+----
+$ git commit -m "name of commit"
+----
+
+4. Upload your local branch to a remote repository
+[source,shell]
+----
+$ git push origin name_branch
+----
+
+5. Create a Pull Request in a origina repository
+  - Click in "New Pull Request" bottom
+  - Select your branch in the original repository and follow the instructions to create a new pull request.
+
+After you send your pull request, we revise your changes and send our feedback.
+
 == LICENSE
 This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
 
