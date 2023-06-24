@@ -30,7 +30,9 @@ def detected_faces_from_image(file: UploadFile = File(...)) -> dict:
     save_flag = os.getenv('SAVE_FILE')
     save_flag = STR_TO_BOOL.get(save_flag)
     # Detected faces in image
-    response = detect_faces(image=file_array, output_dir=output, save=save_flag)
+    response = detect_faces(image=file_array, 
+                            output_dir=output, 
+                            save=save_flag)
     return response
 
 
