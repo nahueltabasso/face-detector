@@ -15,20 +15,9 @@ The Face Detector API is an application that use the 'face-recognition' library 
 
 == INDEX
 
-1. link:gettingStarted.adoc[Getting Started]
-2. link:use.adoc[Use]
-3. link:apiComments.adoc[API Comments]
-4. link:contributions.adoc[Contributions]
-5. link:licences.adoc[Licences]
-6. link:contact.adoc[Contact]
 
-include::gettingStarted.adoc[]
-include::use.adoc[]
-include::apiComments.adoc[]
-include::contribucion.adoc[]
-include::contributions.adoc[]
-include::licences.adoc[]
-include::contact.adoc[]
+1. link:gettingStarted.adoc[GETTING STARTED]
+
 
 == GETTING STARTED
 
