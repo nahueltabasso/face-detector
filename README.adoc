@@ -2,6 +2,17 @@
 
 The Face Detector API is an application that use the 'face-recognition' library and the algorithm of HaarCascade from OpenCV library.
 
+[horizontal]
+++++
+<div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+  <div style="display: flex; align-items: center;">
+    <img src="./data/Foto_Prueba_1c.jpg" alt="Imagen de entrada" style="width: 300px;">
+    <img src="./flecha.png" alt="Flecha" style="width: 50px; margin: 0 20px;">
+    <img src="./data/test_result_4.jpg" alt="Imagen de salida" style="width: 300px;">
+  </div>
+</div>
+++++
+
 == GETTING STARTED
 
 1- Clone the repository or download the project files
@@ -70,8 +81,18 @@ The response of this api are similar to:
 == CONTRIBUTIONS
 All contributions are welcome. If somebody has a new idea or a form to improve this, please crear a issue to work.
 
+1. Create a fork of this repository and clone in your local environment
+[source,shell]
+----
+$ git clone https://github.com/nahueltabasso/face-detector.git
+----
+
 == LICENSE
 This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
 
 == CONTACT
 If you have some question about this you can contac me to my email nahueltabasso@gmail.com
+
+
+
+
