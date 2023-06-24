@@ -15,10 +15,14 @@ The Face Detector API is an application that use the 'face-recognition' library 
 
 == INDEX
 
+1. <<gettingStarted, Getting Started>>
+2. <<use, Use>>
+3. <<apiComments, API Comments>>
+4. <<contributions, Contributions>>
+5. <<licence, Licence>>
+6. <<contact, Contact>>
 
-1. link:gettingStarted.adoc[GETTING STARTED]
-
-
+[[gettingStarted]]
 == GETTING STARTED
 
 1- Clone the repository or download the project files
@@ -33,6 +37,7 @@ git clone https://github.com/nahueltabasso/face-detector.git
 [source]
 pip install -r requirements.txt
 
+[[use]]
 == USE
 1- Save the images that you need to process in the follow directory
 ----
@@ -43,6 +48,7 @@ pip install -r requirements.txt
 
 3- Execute the notebooks
 
+[[apiComments]]
 == API COMMENTS
 
 To consume the APIs REST of this project you need to 
@@ -84,6 +90,7 @@ The response of this api are similar to:
   "number_of_detected_faces": 2
 }
 
+[[contributions]]
 == CONTRIBUTIONS
 All contributions are welcome. If somebody has a new idea or a form to improve this, please crear a issue to work.
 
@@ -117,9 +124,11 @@ $ git push origin name_branch
 
 After you send your pull request, we revise your changes and send our feedback.
 
+[[licence]]
 == LICENSE
 This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
 
+[[contact]]
 == CONTACT
 If you have some question about this you can contac me to my email nahueltabasso@gmail.com
 
