@@ -57,6 +57,20 @@ To consume the APIs REST of this project you need to
 [source]
 uvicorn main:app --host 0.0.0.0 --port 8000
 
+*Note:* You can run this API with docker
+
+* In first place, build the docker image
+[source]
+docker build -t face-detector . -f ./Dockerfile
+
+* Then, run the docker container
+[source]
+docker run -p 8000:8000 --rm -d --name face-detector-api face-detector
+
+* To enter in face-detector-api container execute the follow command
+[source]
+docker exec -it face-detector-api bash
+
 2- Make a request HTTP POST similar to this example with curl or Postman or other http client
 
 [source]
@@ -130,8 +144,4 @@ This project was under https://opensource.org/license/mit/[MIT LICENSE] license.
 
 [[contact]]
 == CONTACT
-If you have some question about this you can contac me to my email nahueltabasso@gmail.com
-
-
-
-
+If you have some question about this you can contact me to my email nahueltabasso@gmail.com
